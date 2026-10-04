@@ -1,0 +1,82 @@
+/* Reset Dasar & Style Halaman */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Styling Header */
+header {
+    background-color: #1e293b;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+header h1 {
+    margin: 0 0 10px 0;
+}
+
+/* Styling Form Pencarian */
+header input[type="text"] {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+}
+
+/* Styling Tombol */
+button {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #1d4ed8;
+}
+
+/* Styling Kartu Produk */
+article {
+    background-color: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Styling Menu Navigasi Header */
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0 0 0;
+    display: flex;
+    gap: 15px;
+}
+
+header nav a {
+    color: #93c5fd;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+header nav a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* Styling Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    color: #64748b;
+    font-size: 0.9rem;
+}
