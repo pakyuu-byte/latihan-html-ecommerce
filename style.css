@@ -1,4 +1,8 @@
-/* Reset Dasar & Style Halaman */
+/* Reset & Pengaturan Umum */
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f4f6f9;
@@ -7,57 +11,41 @@ body {
     padding: 20px;
 }
 
-/* Styling Header */
+/* --- HEADER (FLEXBOX) --- */
 header {
     background-color: #1e293b;
     color: #ffffff;
-    padding: 20px;
+    padding: 15px 25px;
     border-radius: 8px;
+    display: flex; /* Mengaktifkan Flexbox */
+    flex-wrap: wrap;
+    justify-content: space-between; /* Menjaga jarak antar elemen */
+    align-items: center;
+    gap: 15px;
 }
 
 header h1 {
-    margin: 0 0 10px 0;
+    margin: 0;
+    font-size: 1.5rem;
 }
 
-/* Styling Form Pencarian */
+header form {
+    display: flex;
+    gap: 8px;
+}
+
 header input[type="text"] {
     padding: 8px 12px;
-    border: 1px solid #ccc;
+    border: 1px solid #cbd5e1;
     border-radius: 4px;
     outline: none;
 }
 
-/* Styling Tombol */
-button {
-    background-color: #2563eb;
-    color: white;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-}
-
-button:hover {
-    background-color: #1d4ed8;
-}
-
-/* Styling Kartu Produk */
-article {
-    background-color: white;
-    border: 1px solid #e2e8f0;
-    border-radius: 8px;
-    padding: 16px;
-    margin-bottom: 16px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-}
-
-/* Styling Menu Navigasi Header */
 header nav ul {
     list-style: none;
     padding: 0;
-    margin: 15px 0 0 0;
-    display: flex;
+    margin: 0;
+    display: flex; /* Flexbox untuk menu navigasi */
     gap: 15px;
 }
 
@@ -69,10 +57,68 @@ header nav a {
 
 header nav a:hover {
     color: #ffffff;
-    text-decoration: underline;
 }
 
-/* Styling Footer */
+/* --- TATA LETAK UTAMA (SIDEBAR + KATALOG) --- */
+.container {
+    display: flex; /* Flexbox untuk membagi Sidebar & Main */
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Sidebar Filter */
+aside {
+    flex: 1; /* Mengambil 1 bagian lebar */
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    height: fit-content;
+    border: 1px solid #e2e8f0;
+}
+
+/* Main Content */
+main {
+    flex: 3; /* Mengambil 3 bagian lebar */
+}
+
+/* --- KATALOG PRODUK (CSS GRID) --- */
+.product-grid {
+    display: grid; /* Mengaktifkan CSS Grid */
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); /* Kolom otomatis rapi */
+    gap: 20px;
+}
+
+article {
+    background-color: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+article h3 {
+    margin-top: 0;
+}
+
+button {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #1d4ed8;
+}
+
+/* --- FOOTER --- */
 footer {
     text-align: center;
     padding: 20px;
