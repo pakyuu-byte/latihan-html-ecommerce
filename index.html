@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toko Online Saya - Katalog Produk</title>
+</head>
+<body>
+
+    <!-- Header & Navigasi -->
+    <header>
+        <h1>Tokoku Store</h1>
+        <form action="/search" method="GET">
+            <label for="search">Cari Produk:</label>
+            <input type="text" id="search" name="q" placeholder="Cari barang..." required>
+            <button type="submit">Cari</button>
+        </form>
+        <nav>
+            <ul>
+                <li><a href="#">Beranda</a></li>
+                <li><a href="#">Kategori</a></li>
+                <li><a href="#">Promo</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sidebar Filter -->
+    <aside>
+        <h3>Filter Produk</h3>
+        <p>Kategori: Elektronik, Pakaian, Aksesori</p>
+    </aside>
+
+    <!-- Konten Utama Katalog -->
+    <main>
+        <h2>Katalog Produk</h2>
+
+        <article>
+            <h3>Sepatu Lari Sport</h3>
+            <p>Harga: Rp 250.000</p>
+            <button aria-label="Beli Sepatu Lari Sport">Beli Sekarang</button>
+        </article>
+
+        <article>
+            <h3>Tas Ransel Outdoor 40L</h3>
+            <p>Harga: Rp 350.000</p>
+            <button aria-label="Beli Tas Ransel Outdoor 40L">Beli Sekarang</button>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Tokoku Store. Hak Cipta Dilindungi.</p>
+    </footer>
+
+</body>
+</html>
