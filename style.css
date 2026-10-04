@@ -126,3 +126,35 @@ footer {
     color: #64748b;
     font-size: 0.9rem;
 }
+
+/* --- DESAIN RESPONSIF (UNTUK HP & TABLET) --- */
+@media (max-width: 768px) {
+    /* Merubah layout container menjadi bertumpuk vertikal di layar HP */
+    .container {
+        flex-direction: column;
+    }
+
+    /* Merubah header agar elemen tersusun ke bawah */
+    header {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+    }
+
+    header form {
+        width: 100%;
+    }
+
+    header input[type="text"] {
+        flex: 1;
+    }
+
+    header nav ul {
+        justify-content: center;
+    }
+
+    /* Merubah grid produk menjadi 1 kolom penuh di layar HP */
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+}
