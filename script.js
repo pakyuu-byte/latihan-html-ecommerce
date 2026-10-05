@@ -1,20 +1,30 @@
-// Variabel untuk menyimpan jumlah barang di keranjang
-let cartCount = 0;
+// 1. Ambil jumlah keranjang dari localStorage jika ada, jika tidak mulai dari 0
+let cartCount = parseInt(localStorage.getItem('cartCount')) || 0;
 
-// Mengambil elemen HTML berdasarkan ID
+// 2. Mengambil elemen HTML
 const cartCountElement = document.getElementById('cart-count');
-const buyButtons = document.querySelectorAll('button[aria-label^="Beli"]');
+const buyButtons = document.querySelectorAll('article button');
 
-// Menambahkan event listener ke setiap tombol "Beli Sekarang"
+// 3. Tampilkan jumlah keranjang yang tersimpan saat halaman pertama kali dibuka
+if (cartCountElement) {
+    cartCountElement.textContent = cartCount;
+}
+
+// 4. Menambahkan aksi klik pada setiap tombol "Beli Sekarang"
 buyButtons.forEach(button => {
     button.addEventListener('click', function() {
         // Tambahkan jumlah keranjang
         cartCount++;
         
-        // Update angka di layar
-        cartCountElement.textContent = cartCount;
+        // Simpan jumlah terbaru ke localStorage
+        localStorage.setItem('cartCount', cartCount);
 
-        // Berikan respon/umpan balik ke pengguna
+        // Update angka di layar
+        if (cartCountElement) {
+            cartCountElement.textContent = cartCount;
+        }
+
+        // Berikan tanggapan ke pengguna
         alert('Produk berhasil ditambahkan ke keranjang!');
     });
 });
